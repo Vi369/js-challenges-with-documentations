@@ -7,7 +7,7 @@ Day 1 of this challenge, my goal was to revisit the basics of javascript variabl
 #### Activity 1: variable declaration
 * I start Declare variable using var and let assigning a number and a string.
 
-* The difference between `let` and `var`. `var` is crucial : `var` allows for global scope declaration, while 'let' provides more specific control within the block scope.
+* The difference between `let` and `var`. `var` is crucial : `var` allows for global scope declaration, while `let` provides more specific control within the block scope.
 
 #### Activity 2: constant declaration
 * constant value declare using `const` keyword it once assigned and locks the value it means we can't change the variable value again.
