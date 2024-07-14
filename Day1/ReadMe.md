@@ -31,3 +31,9 @@ using `let` I tried to changed value and found `let` variable is so flexiable we
 
 changing `const` variable which fire an error : This made it clear that `const` is for values that won't change.
 
+### Achievements
+
+By completing these activities, I aim to:
+- Deepen my understanding of variable declaration using `var` and `let`.
+- Gain clarity on JavaScript's variable scoping rules.
+- Prepare a solid foundation for tackling more complex JavaScript challenges in the future.
