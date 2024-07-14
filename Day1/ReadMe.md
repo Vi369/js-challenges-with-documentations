@@ -36,4 +36,5 @@ changing `const` variable which fire an error : This made it clear that `const` 
 By completing these activities, I aim to:
 - Deepen my understanding of variable declaration using `var` and `let`.
 - Gain clarity on JavaScript's variable scoping rules.
-- Prepare a solid foundation for tackling more complex JavaScript challenges in the future.
+
+Prepare a solid foundation for tackling more complex JavaScript challenges in the future.
