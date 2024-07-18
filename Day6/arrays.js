@@ -70,7 +70,7 @@ for(let i =0; i<arr.length; i++){
 
 console.log("Iterate array using forEach method.")
 arr.forEach((element)=>{
-    console.log(`${i} element => $${arr[i]}`)
+    console.log(`array element => $${element}`);
 })
 
 /**
@@ -79,9 +79,10 @@ arr.forEach((element)=>{
  * Task: 13 console and log the specific element of array.
  **/
 const twoDimentinalArray = [
-    [1,9,3]
+    [1,9,3],
     [4,7,2]
 ]
+console.log(twoDimentinalArray)
 
 console.log("matrix first element:",twoDimentinalArray[0][0]); // Output: 1
-console.log("Matric last element:",twoDimentinalArray[1][2]); // Output: 2
+console.log("Matrix last element:",twoDimentinalArray[1][2]); // Output: 2
