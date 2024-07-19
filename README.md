@@ -14,3 +14,5 @@ This journey is all about enhancing and revising my JavaScript skills, solidifyi
 * [Day 5](./Day5/) =>  `Functions`
 
 * [Day 6](./Day6/) =>  `Arrays`
+
+* [Day 7](./Day7/) =>  `Objects`
