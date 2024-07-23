@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        .decorate{
+            background-color: burlywood;
+            font-size: larger;
+            font-weight: 400;
+        }
+        .bold{
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body id = 'bodyContainer'>
+    <div>
+        <h1>Activity 1</h1>
+        <div id="changeText">Task 1</div>
+        <div class="ChangeBgColor">Task 2</div>
+    </div>
+
+    <div>
+        <h1>Activity 2</h1>
+
+        <div>
+            <h1>Unordered List : task 2</h1>
+            <ul id="unOrderlist">
+                <li>chai</li>
+                <li>Aur</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id = 'removePara'>
+        <h1>Activity 3</h1>
+        <h4>Below para graph will be removed: Task 1</h4>
+        <p id="para">this article for remove.</p>
+
+        <div>
+            <ul id="parent">
+                <li>task 2 remove specific child</li>
+                <li class="child">first child</li>
+                <li class="child">second child</li>
+                <li class="child">last child</li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <h1>Activity 4: change attribute of html</h1>
+        <div id="hello", style="color: aquamarine;"> by id i choose this element and remove style attribute</div>
+        <div class="hello" > by class i choose this element and replace class name bello</div>
+        <div id="select"> by using setAttribute i set attribute in this element and make text bold.</div>
+
+        <button id="toggleButton">click to see Magic</button>
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque deleniti et obcaecati similique neque maxime ratione iure laudantium nemo enim?</p>
+    </div>
+
+    <div>
+        <h1>Activity: 5</h1>
+        <p id="changeAblePara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quia.
+        </p>
+        <button id="changeButton">Change Content</button>
+    </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
