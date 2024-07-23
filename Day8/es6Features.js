@@ -80,7 +80,7 @@ console.log(productOfNum(20,30));
 console.log(productOfNum(20));
 
 /**
- * Activity 5: Enganced Object Literals
+ * Activity 5: Enhanced Object Literals
  * Task: 8 use enhaced object literals to create an object with methods and propeerties and log the object.
  * Task: 9 create an object with computed property names based on variables and log the object to console.
  */
