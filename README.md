@@ -5,23 +5,23 @@ Each section of this challenge is organized into its own directory with a dedica
 
 #### Click and go that section
 
-* [Day 1](./Day1/) =>   `Variables And Data Types`
+* [Day 1](./Day01/) =>   `Variables And Data Types`
 
-* [Day 2](./Day2/) => `Operators`  
+* [Day 2](./Day02/) => `Operators`  
 
-* [Day 3](./Day3/) => `Control Structure` 
+* [Day 3](./Day03/) => `Control Structure` 
 
-* [Day 4](./Day4/) =>  `Loops`
+* [Day 4](./Day04/) =>  `Loops`
 
-* [Day 5](./Day5/) =>  `Functions`
+* [Day 5](./Day05/) =>  `Functions`
 
-* [Day 6](./Day6/) =>  `Arrays`
+* [Day 6](./Day06/) =>  `Arrays`
 
-* [Day 7](./Day7/) =>  `Objects`
+* [Day 7](./Day07/) =>  `Objects`
 
-* [Day 8](./Day8/) =>  `Es6+ Features`
+* [Day 8](./Day08/) =>  `Es6+ Features`
 
-* [Day 9](./Day9/) =>  `Dom Manipulations`
+* [Day 9](./Day09/) =>  `Dom Manipulations`
 
 * [Day 10](./Day10/) =>  `Event Handling`
 
