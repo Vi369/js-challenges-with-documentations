@@ -16,3 +16,5 @@ This journey is all about enhancing and revising my JavaScript skills, solidifyi
 * [Day 6](./Day6/) =>  `Arrays`
 
 * [Day 7](./Day7/) =>  `Objects`
+
+* [Day 8](./Day8/) =>  `Es6+ Features`
