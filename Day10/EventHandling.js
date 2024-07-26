@@ -53,24 +53,26 @@ inputFeild.addEventListener('keyup', function(e){
     paragraph.textContent = e.key;
 })
 
-
-
 /**
- * Activity 4: Form Events
- * Task: 7  add a submit event listener to a a from that prevent the default submission and logs the form data to console.
- * Task: 8 add a change event listener to a select dropdown that displays the selected value in a paragraph.
+ * Activity 3: form Events
+ * Task: 7 add a submit event listener to a form that prevents the default submission and logs the form data to the console.
  */
 
-const signupForm = document.querySelector('#signupForm');
+const form = document.querySelector('#section4 form');
 
-signupForm.addEventListener('submit', function(e){
-    e.preventDefault()
-    
-})
+console.log(form);
 
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-/**
- * Activity 5:  Event Delegation
- * Task: 9  add a click event listener to a list that logs the text content of the clicked list item using event delegation.
- * Task: 10 add an event listener to a parent element that listens for events form dynamically added child elements.
- */
+    const data = new FormData(form);
+    console.log('FormData Entries:');
+    for (const [key, value] of data.entries()) {
+        console.log(`Key: ${key}, Value: ${value}`);
+    }
+
+    data.forEach((value, key) => {
+        console.log(`key: ${key} value${value}`);
+    });
+
+});
