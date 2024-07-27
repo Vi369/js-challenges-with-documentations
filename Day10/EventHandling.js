@@ -54,13 +54,13 @@ inputFeild.addEventListener('keyup', function(e){
 })
 
 /**
- * Activity 3: form Events
+ * Activity 4: form Events
  * Task: 7 add a submit event listener to a form that prevents the default submission and logs the form data to the console.
  */
 
 const form = document.querySelector('#section4 form');
 
-console.log(form);
+// console.log(form);
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -76,3 +76,46 @@ form.addEventListener('submit', function (e) {
     });
 
 });
+
+// Task: 8 add a change event listemer to a select dropdown that displays the selceted value in a paragraph;
+const genderShowPara = document.querySelector('#section4 form p')
+// console.log(genderShowPara);
+const gender = document.getElementById('gender');
+gender.addEventListener('change', function(e){
+    genderShowPara.textContent = e.target.value;
+})
+
+/**
+ * Activity 4: Event Delegation
+ * Task: 9 add a click event listener to a list that logs the text content of hte clicked list item using event delegation.
+ */
+
+const ul = document.querySelector('#section5 ul')
+
+ul.addEventListener('click', function (e){
+    if(e.target.tagName === 'LI'){
+        console.log("clicked" , e.target.textContent)
+    }
+})
+
+
+// Task: 10 add an event listener to a parent element that listens for events from dynamically added child elements
+
+const parentcontainer = document.getElementById("parentContainer");
+const addItem = document.getElementById("addItem");
+
+let count = 0;
+
+addItem.addEventListener('click', function(){
+    count++;
+    const li = document.createElement('li');
+    li.textContent = `item${count}`;
+    parentcontainer.appendChild(li);
+})
+
+parentcontainer.addEventListener('click', function(e){
+    if(e.target && e.target.tagName === 'LI'){
+        console.log(e.target.textContent);
+        alert(`you clicked ${e.target.textContent}`);
+    }
+})
