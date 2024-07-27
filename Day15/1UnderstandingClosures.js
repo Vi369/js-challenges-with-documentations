@@ -43,9 +43,3 @@ const counter = privateCounter();
 console.log("current value:",counter.getValue());
 counter.icrement()
 console.log("After Increment current value:",counter.getValue());
-
-
-
-
-
-
