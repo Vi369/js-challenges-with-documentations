@@ -31,3 +31,9 @@ Each section of this challenge is organized into its own directory with a dedica
 
 * [Day 13](./Day13/) =>  `Modules`
 
+* [Day 14](./Day14/) =>  `Classes`
+
+* [Day 15](./Day15/) =>  `Closures`
+
+* [Day 16](./Day16/) =>  `Recursion`
+
