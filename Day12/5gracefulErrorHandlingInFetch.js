@@ -1,5 +1,5 @@
 /**
- * Activity 5: Basic Error Handling with try-catch
+ * Activity 5: Graceful Error Handling in Fetch
  * Task: 8  use the fetch api to request data from an invalid url and handle the error using .catch() log an appropriate error message to the console.
  * Task: 9 use the fetch api to request data from an invalid url and handle using async await try catch an appropriate error message to log.
  */
