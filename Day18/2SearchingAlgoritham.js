@@ -21,13 +21,13 @@ function linerSearch(arr, target){
 
 }
 
-// const arr = [1,2,3,1,5,2,7,9]
-// const result = linerSearch(arr, 7);
-// console.log(`Index of target value:${result}`);
+const arr = [1,2,3,1,5,2,7,9]
+const result = linerSearch(arr, 7);
+console.log(`Index of target value:${result}`);
 
-// console.log(linerSearch(arr, 10)) // target value not available
-// console.log(linerSearch([], 10)) // Provided Array is Empty!
-// console.log(linerSearch([1,2])) //Provided Array is Empty!
+console.log(linerSearch(arr, 10)) // target value not available
+console.log(linerSearch([], 10)) // Provided Array is Empty!
+console.log(linerSearch([1,2])) //Provided Array is Empty!
 
 
 /** Task 5 Implement the binary search algorithm to find a target value in a sorted array.
