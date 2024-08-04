@@ -15,6 +15,8 @@ const retriveData = sessionStorage.getItem("age");
 alert(`age: ${retriveData}`);
 })
 
+
+// Task 6 save an object to sessionStorage by converting it to json string. Retrieve parse the object then log it
 document.getElementById('form').addEventListener('submit', function(e){
     e.preventDefault();
 
