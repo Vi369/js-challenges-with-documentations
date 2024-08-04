@@ -9,10 +9,19 @@ const showsessionData = document.getElementById('sessionData');
 const username = document.getElementById('username')
 const form = document.getElementById('form');
 
+document.addEventListener('DOMContentLoaded', function(){
+    const localData = localStorage.getItem(username.tagName);
+    const sessionData = sessionStorage.getItem(username.tagName);
+    showlocalData.innerText = `local Srorage: ${localData}`
+    showsessionData.innerText = `session Srorage: ${sessionData}`
+})
+
 form.addEventListener('submit', function(e){
     e.preventDefault()
     storeData(username.tagName, username.value);
     retrieveData(username.tagName);
+
+    form.reset();
 } )
 function storeData (key, value){
     
