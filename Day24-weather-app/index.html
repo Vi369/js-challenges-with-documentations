@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main id="container">
+        <h1>Weather App</h1>
+        <p id="description">Get real-time weather details for any city, right now!</p>
+        <input type="text" id="cityInput" placeholder="Eanter a City...." autofocus>
+        <button id="searchButton">Search</button>
+
+        <!-- Current weather info -->
+        <section class="Weather-info">
+        <!-- City name -->
+            <h2 id="cityName"></h2>
+        
+        <!-- Weather condition  -->
+         <div class="weather-condition">
+            <p></p>
+         </div>
+
+        <!-- temprature show -->
+            <div class="tempratureCard">
+                <p id="tempValue"></p>
+            </div>
+
+        <!-- data and time -->
+            <p id="localTime"></p>
+            <p id="timeZone"></p>
+        </section>
+
+        <!-- forcast weather -->
+         <section class="forcast-info">
+            
+         </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
