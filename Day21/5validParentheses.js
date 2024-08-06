@@ -7,27 +7,34 @@
  */
 
 function validParenthese(str){
-    if(!str){
+    if (!str) {
         return "Provide a valid string.";
     }
 
-    if(str[0] === ")" || str[0] === "]" || str[0] === "}"){
+    if (str[0] === ")" || str[0] === "]" || str[0] === "}") {
         return false;
     }
+
+    const map = {
+        "(": ")",
+        "[": "]",
+        "{": "}",
+    };
 
     let stack = [];
 
     for (const char of str) {
-        if(char === "(" || char === "(" || char === "{"){
+        if (char === "(" || char === "[" || char === "{") {
             stack.push(char);
-        }
-
-        if(char === ")" || char === "}" || char ==="]"){
-            stack.pop();
+        } else if (char === ")" || char === "}" || char === "]") {
+            let popout = stack.pop();
+            if (map[popout] !== char) {
+                return false;
+            }
         }
     }
 
-    return stack.length === 0 ? true : false;
+    return stack.length === 0;
 }
 
 console.log("Valid Or Not:" ,validParenthese("")); // message 
