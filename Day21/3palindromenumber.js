@@ -4,16 +4,17 @@
  * log the result for a few test cases
  */
 
-function checkPalindromeNumber(...args){
-    if(args.length <= 1){
-        return true
-    }else if(args[0] === args[args.length -1]){
-        return checkPalindromeNumber(args.slice(1,args.length -1));
-    }else{
+function checkPalindromeNumber(number){
+    if(number < 0){
         return false
     }
+
+const str = number.toString();
+const reversed = str.split('').reverse().join('');
+
+return str === reversed;
 }
 
-console.log(checkPalindromeNumber(1,2,3,4))
-console.log(checkPalindromeNumber(1,2,1))
-console.log(checkPalindromeNumber([1,2,1]))
+console.log(checkPalindromeNumber(121))
+console.log(checkPalindromeNumber(-121))
+console.log(checkPalindromeNumber(10))
