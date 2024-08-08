@@ -1,0 +1,76 @@
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #fff;
+}
+h1,p,form,#movie-info-container{
+    text-align: center;
+}
+h1{
+    font-size: 45px;
+    letter-spacing: 0.5px;
+}
+
+p{
+    font-size: larger;
+    letter-spacing: 0.9;
+}
+
+input[type="text"]{
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: border-color, 0.5, ease;
+}
+
+input[type="text"]:focus{
+    border-color: #CC5500;
+}
+
+button{
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #CC5500;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button:hover{
+    background-color: #9E4200;
+    transform: scale(1.05);
+}
+
+button:active{
+    background-color: #FA6800;
+    transform: scale(1);
+}
+
+#movie-info-container{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 0.5fr));
+    margin: 10px auto;
+}
+
+.movie-poster{
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: 0.4s ease-in-out;
+}
+
+.movie-poster:hover{
+    transform: scale(1.1);
+}
+
+#more-info-btn{
+    text-decoration: underline;
+    color: #CC5500;
+    cursor: pointer;
+}
