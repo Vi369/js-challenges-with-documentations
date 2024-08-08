@@ -69,7 +69,7 @@ button:active{
     transform: scale(1.1);
 }
 
-#more-info-btn{
+.more-info-btn{
     text-decoration: underline;
     color: #CC5500;
     cursor: pointer;
