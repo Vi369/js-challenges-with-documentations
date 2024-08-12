@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth; /* smooth scrolling for anchor links */
+}
 body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,6 +44,13 @@ button{
     cursor: pointer;
     color: #fff;
 }
+.more-info-btn{
+    margin-left: 5px;
+}
+.more-info-btn:hover{
+    text-decoration: none;
+    color: #994001;
+}
 
 button:hover{
     background-color: #9E4200;
@@ -73,4 +83,112 @@ button:active{
     text-decoration: underline;
     color: #CC5500;
     cursor: pointer;
+}
+
+.movie-pop-up-card {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 70%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.movie-details {
+    padding: 16px;
+}
+
+.movie-details h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.movie-details p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.movie-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-details ul li {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #777;
+}
+
+.cast-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cast-member {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the container */
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.cast-image {
+    width: 100px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 16px; /* Space between image and text */
+    border-radius: 8px;
+}
+
+.cast-info {
+    flex: 1; /* Take up remaining space */
+}
+
+.cast-info p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.cast-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cast-info a:hover {
+    text-decoration: underline;
+}
+
+#moreAboutMovie{
+    color: #000000;
+}
+
+/* Optional: Responsive Design */
+@media (max-width: 600px) {
+    .cast-member {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .cast-image {
+        margin-bottom: 16px; /* Space below image when stacked */
+    }
 }
