@@ -37,6 +37,7 @@ function getDayOfWeek(date) {
 
 searchButton.addEventListener('click', async function(){
     const input = cityInput.value;
+    forecastContainer.innerHTML = ''; // reset privious value; 
     if(!input){
         alert("Please provide City Name.")
         return;
