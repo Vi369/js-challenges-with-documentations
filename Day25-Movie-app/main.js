@@ -3,7 +3,7 @@
 const input = document.querySelector('#movieInput')
 const container = document.querySelector('#movie-info-container')
 const form = document.querySelector('#form')
-
+const detailContainer = document.querySelector('#movie-detail-container');
 // get movie info function
 async function getMovieInfo(query){
     try {
@@ -30,6 +30,8 @@ async function getMovieInfo(query){
 
 // movie details show function
 function showIncontainer(movies){
+    container.innerHTML = ''; // reset privious content so new appear proper way
+    detailContainer.innerHTML = ''; // reset privious content so new appear proper way
     for (const movie of movies) {
         let title = movie.show?.name;
         let poster = movie.show?.image?.medium;
@@ -96,7 +98,7 @@ container.addEventListener('click', function(e) {
 
 // display movie info
 function displayMovieInfo(movieInfo) {
-    const detailContainer = document.querySelector('#movie-detail-container');
+    detailContainer.innerHTML = ''; // reset privious content so new appear proper way
 
     if (!detailContainer) {
         console.error('Container element not found');
