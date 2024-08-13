@@ -42,8 +42,86 @@ button{
     padding: 10px 30px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+button:hover{
+    background-color: #014d9f;
+    border: none;
 }
 
 .weather-info {
     margin-top: 20px;
+}
+
+
+
+#cityName {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+#weather-condition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#tempratureCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+#tempratureCard p {
+    font-size: 18px;
+    margin: 0;
+}
+
+#localTime, #timeZone {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+.forcast-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.forecast-Item {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-Item h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.forecast-Item p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.forecast-Item img {
+    width: 50px;
+    height: 50px;
 }

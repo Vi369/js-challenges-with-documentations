@@ -9,17 +9,31 @@ const searchButton = document.getElementById('searchButton');
 // weather-info
 const cityName = document.getElementById('cityName');
 const localTime = document.getElementById('localTime');
-const tempValue = document.getElementById('tempValue');
+const dayContainer = document.getElementById('day');
+const tempratureCard = document.getElementById('tempratureCard')
 const timeZone = document.getElementById('timeZone');
-
+const weatherCondition = document.getElementById('weather-condition');
 // forecast-info
 const forecastContainer = document.querySelector('.forcast-info');
-// http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${cityInput}&aqi=yes/
-// get data function
+
+// get weather and forecast data func
 async function getData(apikey, cityName, days = 5) {
-    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${cityName}&days=${days}&aqi=no&alerts=no`)
-    return await response.json();
+    try {
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${cityName}&days=${days}&aqi=no&alerts=no`)
+        return await response.json();
+    } catch (error) {
+        console.log(error.message)
+        console.log(error);
+    }
 }
+
+// func get day of week
+function getDayOfWeek(date) {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const dayIndex = new Date(date).getDay(); // Get the day index (0-6) for the given date
+    return daysOfWeek[dayIndex]; // Return the name of the day
+}
+
 
 searchButton.addEventListener('click', async function(){
     const input = cityInput.value;
@@ -29,9 +43,20 @@ searchButton.addEventListener('click', async function(){
     }
     const result = await getData(apikey, input);
     console.log(result)
+
+    const day = getDayOfWeek(result.location.localtime)
+
+
+    weatherCondition.innerHTML = `
+    <p>${result.current?.condition?.text}</p>
+    <img src = "${result.current?.condition?.icon}" alt="Weather condition png" />
+    `;
     cityName.innerText = `${result.location.name}, ${result.location.region}, ${result.location.country}`;
-    tempValue.innerText = `Current Temperature: ${result.current.temp_c}`;
-    localTime.innerText = `Current Date/Time ${result.location.localtime}`;
+   tempratureCard.innerHTML = `
+    <p>Current Temperature: ${result.current.temp_c}&deg</p>
+    <p>${result.current.temp_f}  &#8457</p>`;
+    localTime.innerText = `Date/Time ${result.location.localtime}`;
+    dayContainer.innerText = `${day}`;
     timeZone.innerText = `Time Zone: ${result.location.tz_id}`
 
     // forecast info
@@ -41,10 +66,12 @@ result.forecast.forecastday.forEach((data)=>{
     let date = data.date;
     let temperatur = data.day.avgtemp_c;
     let fahrenheit = data.day.avgtemp_f;
+    const day = getDayOfWeek(date)
 
     const forecastItem = 
     `<div class ="forecast-Item">
-        <h3>Date: ${date}</h3>
+        <h3>${day}</h3>
+        <p>Date: ${date}</p>
         <img src ="${data.day.condition.icon}" alt = "Weather icon" />
         <p>${temperatur} &deg</p>
         <p>${fahrenheit} &#8457</p>
