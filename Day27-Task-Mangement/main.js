@@ -52,11 +52,11 @@ function renderTask(arr){
 
         // update action
         const actionColumn = document.createElement('td');
-        actionColumn.classList = `flex flex-col gap-2 justify-center`
+        actionColumn.classList.add('flex', 'flex-col', 'gap-2', 'justify-center');
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit'
-        editButton.classList = `bg-orange-400 text-white rounded-lg hover:bg-orange-600`
-        editButton.addEventListener('click', function(e){
+        editButton.classList.add('bg-green-400', 'text-white', 'rounded-lg', 'hover:bg-green-600', 'px-2', 'py-1');
+        editButton.addEventListener('click', function(){
             const newTask = prompt("Edit title: ", task.title)
             const newMessage = prompt("Edit Description:", task.message)
             const newDate = prompt("Edit Date:" , task.date);
@@ -74,7 +74,7 @@ function renderTask(arr){
         // delete action
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.classList = `bg-red-400 text-white rounded-lg hover:bg-red-600`
+        deleteButton.classList.add('bg-red-400', 'text-white', 'rounded-lg', 'hover:bg-red-600' , 'px-2', 'py-1');
         deleteButton.addEventListener('click', function(){
             if(confirm("Are you sure you want to delete this Task!")){
                 // remove from array and re-render
