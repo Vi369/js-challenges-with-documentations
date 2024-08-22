@@ -2,7 +2,6 @@ import "./style.css"
 
 const apikey = import.meta.env.VITE_WEATHER_API_KEY; // Access API key from environment variable
 
-// http://api.weatherapi.com/v1/forecast.json?key=b6758e48449d4af691482623240508&q=London&days=5&aqi=no&alerts=no
 
 const cityInput = document.getElementById('cityInput');
 const searchButton = document.getElementById('searchButton');
