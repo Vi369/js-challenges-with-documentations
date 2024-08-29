@@ -3,30 +3,30 @@
         "name": "Green Tea",
         "price": 4.99,
         "description": "A light and refreshing tea made from unoxidized leaves, rich in antioxidants and known for its health benefits.",
-        "image_url": "https://example.com/images/green-tea.jpg"
+        "image_url": "./Product_images/green_tea.jpg"
     },
     {
         "name": "Black Tea",
         "price": 3.99,
         "description": "A bold and robust tea made from fully oxidized leaves, perfect for a strong and energizing brew.",
-        "image_url": "https://example.com/images/black-tea.jpg"
+        "image_url": "./Product_images/black_tea.jpg"
     },
     {
         "name": "Herbal Tea",
         "price": 5.49,
         "description": "A soothing blend of herbs and flowers, caffeine-free and ideal for relaxation.",
-        "image_url": "https://example.com/images/herbal-tea.jpg"
+        "image_url": "./Product_images/herbal_tea.jpg"
     },
     {
         "name": "Oolong Tea",
         "price": 6.99,
         "description": "A traditional Chinese tea with a unique flavor, semi-oxidized and known for its smooth taste.",
-        "image_url": "https://example.com/images/oolong-tea.jpg"
+        "image_url": "./Product_images/Oolong_tea.jpg"
     },
     {
         "name": "Chamomile Tea",
         "price": 4.49,
         "description": "A calming tea made from chamomile flowers, often used to aid sleep and reduce stress.",
-        "image_url": "https://example.com/images/chamomile-tea.jpg"
+        "image_url": "./Product_images/Chamomile_tea.jpg"
     }
 ]
