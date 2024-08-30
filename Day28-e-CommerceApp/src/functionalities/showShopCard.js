@@ -16,7 +16,7 @@ export function showShopCard(products){
         img.alt = name;
         productClone.querySelector('h2').innerText = name;
         productClone.querySelector('p:nth-of-type(1)').innerText = description;
-        productClone.querySelector('p:nth-of-type(2)').innerText = `$ ${price}`;
+        productClone.querySelector('p:nth-of-type(2)').innerHTML = `<i class="fa-solid fa-indian-rupee-sign"> ${Math.floor(price * 60)}</i> `;
 
         productContainer.appendChild(productClone)
     })
