@@ -1,12 +1,12 @@
+import { toggleQuantity } from "./toggleQuantity";
+
 const productContainer = document.getElementById('productContainer');
 const productTemplate = document.getElementById('productTemplate');
-
-
 
 export function showShopCard(products){
 
     products.forEach((product)=>{
-        const {name, price, description, image_url} = product;
+        const {name, price, description, image_url, id} = product;
 
         // clone the template 
         const productClone = document.importNode(productTemplate.content, true);
@@ -18,7 +18,12 @@ export function showShopCard(products){
         productClone.querySelector('p:nth-of-type(1)').innerText = description;
         productClone.querySelector('p:nth-of-type(2)').innerHTML = `<i class="fa-solid fa-indian-rupee-sign"> ${Math.floor(price * 60)}</i> `;
 
+        // unique id sets on every element
+        productClone.querySelector('#cards').setAttribute('id', `card${id}`)
+        
+        productClone.querySelector('.quantityToggle').addEventListener('click', function(event){
+            toggleQuantity(event, id);
+        })
         productContainer.appendChild(productClone)
     })
-
 }

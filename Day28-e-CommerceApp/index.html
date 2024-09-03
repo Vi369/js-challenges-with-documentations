@@ -23,7 +23,7 @@
 
      <!-- product template card -->
       <template id="productTemplate">
-        <div class="bg-white shadow-md rounded-lg">
+        <div class="bg-white shadow-md rounded-lg" id="cards">
             <img class="w-full h-48 object-cover" src="" alt="">
             <div class="p-3">
                 <h2 class="text-xl font-semibold mb-2"></h2>
@@ -33,19 +33,19 @@
                  <!-- increment decrement-->
                  <div class="flex items-center">
                     <h3 class="font-semibold mr-3">Quantity:</h3>
-                    <div class="flex items-center border rounded-md">
-                        <button class="text-white bg-orange-500 hover:bg-orange-700 px-3 py-1 rounded-l-md focus:outline-none">
+                    <div class="flex items-center border rounded-md quantityToggle">
+                        <button class="decrement text-white bg-orange-500 hover:bg-orange-700 px-3 py-1 rounded-l-md focus:outline-none">
                             <i class="fas fa-minus"></i>
                         </button>
-                        <span class="px-4 text-lg">1</span>
-                        <button class="text-white bg-orange-500 hover:bg-orange-700 px-3 py-1 rounded-r-md focus:outline-none">
+                        <span class="px-4 text-lg productQuantity">1</span>
+                        <button class="increment text-white bg-orange-500 hover:bg-orange-700 px-3 py-1 rounded-r-md focus:outline-none">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
                 </div>
                 <!-- add to cart button -->
                 <button class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded mt-2">
-                    <i class="fa-solid fa-cart-shopping mr-2"></i> Add to Cart
+                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                 </button>   
             </div>
         </div>
