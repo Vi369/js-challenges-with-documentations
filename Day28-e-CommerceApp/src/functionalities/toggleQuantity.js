@@ -18,7 +18,7 @@ export  function  toggleQuantity(event, id){
     }
 
     if(event.target.classList.contains('decrement')){
-        if(quantity > 1){
+        if(quantity > 0){
             quantity -= 1
         }
     }
