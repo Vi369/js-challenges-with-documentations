@@ -6,7 +6,7 @@ export  function  toggleQuantity(event, id){
 
     const productQuantity = currentCardProduct.querySelector('.productQuantity');
     
-    let quantity = parseInt(productQuantity.getAttribute("data-quantity")) || 1;
+    let quantity = parseInt(productQuantity.getAttribute("data-quantity")) || 0;
 
     // console.log(event.target)
     if(event.target.classList.contains('increment')){
