@@ -1,3 +1,4 @@
+import { addToCart } from "./addToCart";
 import { toggleQuantity } from "./toggleQuantity";
 
 const productContainer = document.getElementById('productContainer');
@@ -21,9 +22,16 @@ export function showShopCard(products){
         // unique id sets on every element
         productClone.querySelector('#cards').setAttribute('id', `card${id}`)
         
+        // increment and decrement toggle
         productClone.querySelector('.quantityToggle').addEventListener('click', function(event){
             toggleQuantity(event, id);
         })
+
+        // add to cart functionalities
+        productClone.querySelector('.cart').addEventListener('click', function(event){
+            addToCart(event, id);
+        })
+        
         productContainer.appendChild(productClone)
     })
 }

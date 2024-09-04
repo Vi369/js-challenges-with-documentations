@@ -9,7 +9,7 @@ export  function  toggleQuantity(event, id){
     let quantity = parseInt(productQuantity.getAttribute("data-quantity")) || 1;
 
     // console.log(event.target)
-    if(event.target.classList.contains('fa-plus')){
+    if(event.target.classList.contains('increment')){
         if(quantity < 10){
             quantity +=1
         }else{
@@ -17,7 +17,7 @@ export  function  toggleQuantity(event, id){
         }
     }
 
-    if(event.target.classList.contains('fa-minus')){
+    if(event.target.classList.contains('decrement')){
         if(quantity > 1){
             quantity -= 1
         }
