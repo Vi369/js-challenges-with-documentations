@@ -1,3 +1,4 @@
+import { getDetailsFormLocalStorage } from "../localStorage/getDetailsFromLocalStorage";
 import { addToCart } from "./addToCart";
 import { toggleQuantity } from "./toggleQuantity";
 
@@ -5,7 +6,9 @@ const productContainer = document.getElementById('productContainer');
 const productTemplate = document.getElementById('productTemplate');
 
 export function showShopCard(products){
-
+    // update the cart value
+    getDetailsFormLocalStorage();
+    
     products.forEach((product)=>{
         const {name, price, description, image_url, id} = product;
 
