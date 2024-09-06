@@ -2,6 +2,7 @@ import { toggleQuantity } from "./src/functionalities/toggleQuantity";
 import { updateCartValue } from "./src/functionalities/updateCartValue";
 import { getDetailsFormLocalStorage } from "./src/localStorage/getDetailsFromLocalStorage";
 import { removeLocalData } from "./src/localStorage/RemoveLocalData";
+import { updateLocalData } from "./src/localStorage/updateLocalData";
 
 // localData
 const localCartData = getDetailsFormLocalStorage();
@@ -22,16 +23,15 @@ if(localCartData){
 
         
         productClone.querySelector('h2').innerText = productName;
-        productClone.querySelector('p:nth-of-type(1)').innerHTML = `<i class="fa-solid fa-indian-rupee-sign">${price}</i> `;
+        productClone.querySelector('p:nth-of-type(1)').innerHTML = `<i class="fa-solid fa-indian-rupee-sign">${price * quantity}</i> `;
 
         productClone.querySelector('.productQuantity').innerText = quantity;
 
         // increment and decrement toggle
         productClone.querySelector('.quantityToggle').addEventListener('click', function(event){
-            toggleQuantity(event, id);
+            const updatedQuantity = toggleQuantity(event, id);
             // update the local store data
-            // TODO: 
-            updateLocalData(localCartData, id);
+            updateLocalData(localCartData, updatedQuantity, id);
         })
 
         // Remove cart element 

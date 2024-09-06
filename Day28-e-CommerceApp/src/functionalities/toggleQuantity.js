@@ -26,6 +26,5 @@ export  function  toggleQuantity(event, id){
     productQuantity.innerText  = quantity;
     // productQuantity.setAttribute("data-quantity", quantity.toString());
 
-    // nothing to return 
-    return ;
+    return quantity;
 }

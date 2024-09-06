@@ -21,7 +21,7 @@ export function addToCart(event, id){
         return false;
     }
 
-    price = price * quantity
+    // price = price * quantity
     let addCart =  {productName, price, quantity, id};
     localStoreData.push(addCart);
     // set to the local storage
