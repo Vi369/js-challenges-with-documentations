@@ -23,7 +23,7 @@ if(localCartData){
 
         
         productClone.querySelector('h2').innerText = productName;
-        productClone.querySelector('p:nth-of-type(1)').innerHTML = `<i class="fa-solid fa-indian-rupee-sign">${price * quantity}</i> `;
+        productClone.querySelector('p:nth-of-type(1)').innerHTML = `<i class="fa-solid fa-indian-rupee-sign tracking-wider"> ${price * quantity}</i> `;
 
         productClone.querySelector('.productQuantity').innerText = quantity;
 
@@ -46,5 +46,16 @@ if(localCartData){
         })
 
         productContainer.appendChild(productClone)
+
+        // subtotal section 
+        const subtotalValueContainer = document.getElementById('subtotal');
+
+        const subtotalPrice = localCartData.reduce((acc, item)=>{
+            const itmeSubtotal = item.price * item.quantity;
+
+            return acc + itmeSubtotal;
+        }, 0); // initial value
+
+        subtotalValueContainer.innerHTML = `Subtotal: <i class="fa-solid fa-indian-rupee-sign tracking-wider"> ${subtotalPrice}</i> `;
     })
 }
