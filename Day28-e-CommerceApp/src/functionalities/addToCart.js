@@ -10,11 +10,17 @@ export function addToCart(event, id){
 
     let productName = currentCard.querySelector('h2').innerText;
     let price = currentCard.querySelector('p:nth-of-type(2)').innerText;
-    let quantity = currentCard.querySelector('.productQuantity').innerText;
+    let quantity = Number(currentCard.querySelector('.productQuantity').innerText);
+
+    console.log("quantity:",quantity)
+    if(quantity === 0){
+        alert('Please Select the Quantity!')
+        return false;
+    }
 
     // if the this product already in cart then
     let existingProd = localStoreData.find(item => item.id === id);
-    console.log(existingProd);
+    console.log("hello",existingProd);
 
     if(existingProd){
         alert('This Product Already Exist bro! check the Cart.')
