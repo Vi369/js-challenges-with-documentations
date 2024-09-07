@@ -1,7 +1,7 @@
 import { toggleQuantity } from "./src/functionalities/toggleQuantity";
 import { updateCartValue } from "./src/functionalities/updateCartValue";
 import { getDetailsFormLocalStorage } from "./src/localStorage/getDetailsFromLocalStorage";
-import { removeLocalData } from "./src/localStorage/RemoveLocalData";
+import { removeLocalData } from "./src/localStorage/RemoveLocalData.js";
 import { updateLocalData } from "./src/localStorage/updateLocalData";
 import { subtotalPrice } from "./src/functionalities/subtotalPrice";
 // localData
