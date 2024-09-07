@@ -95,5 +95,8 @@ const cvv = document.getElementById('cvv').value;
         // update the Local Storage data 
         localStorage.removeItem('cardData');
     }, 1500)
+
+    // refresh the page 
+    location.reload()
 })
 
