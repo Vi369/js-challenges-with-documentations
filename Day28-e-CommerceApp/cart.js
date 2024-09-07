@@ -3,7 +3,7 @@ import { updateCartValue } from "./src/functionalities/updateCartValue";
 import { getDetailsFormLocalStorage } from "./src/localStorage/getDetailsFromLocalStorage";
 import { removeLocalData } from "./src/localStorage/RemoveLocalData";
 import { updateLocalData } from "./src/localStorage/updateLocalData";
-
+import { subtotalPrice } from "./src/functionalities/subtotalPrice";
 // localData
 const localCartData = getDetailsFormLocalStorage();
 
@@ -31,7 +31,8 @@ if(localCartData){
         productClone.querySelector('.quantityToggle').addEventListener('click', function(event){
             const updatedQuantity = toggleQuantity(event, id);
             // update the local store data
-            updateLocalData(localCartData, updatedQuantity, id);
+            const updatedata =  updateLocalData(localCartData, updatedQuantity, id);
+            subtotalPrice(updatedata);
         })
 
         // Remove cart element 
@@ -43,19 +44,56 @@ if(localCartData){
             const updatedLocalStorageData = removeLocalData(localCartData, id);
             // update the cart 
             updateCartValue(updatedLocalStorageData.length);
+            // subtotal section update
+        subtotalPrice(updatedLocalStorageData);
         })
 
         productContainer.appendChild(productClone)
 
-        // subtotal section 
-        const subtotalValueContainer = document.getElementById('subtotal');
-
-        const subtotalPrice = localCartData.reduce((acc, item)=>{
-            const itmeSubtotal = item.price * item.quantity;
-
-            return acc + itmeSubtotal;
-        }, 0); // initial value
-
-        subtotalValueContainer.innerHTML = `Subtotal: <i class="fa-solid fa-indian-rupee-sign tracking-wider"> ${subtotalPrice}</i> `;
+        // subtotal section update
+        subtotalPrice(localCartData);
     })
 }
+
+// form submission handle 
+const checkoutForm = document.getElementById('checkoutForm')
+
+checkoutForm.addEventListener('submit', function(event){
+    event.preventDefault();
+
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const address = document.getElementById('address').value;
+const city = document.getElementById('city').value;
+const state = document.getElementById('state').value;
+const zip = document.getElementById('zip').value;
+const cardNumber = document.getElementById('cardNumber').value;
+const expiryDate = document.getElementById('expiryDate').value;
+const cvv = document.getElementById('cvv').value;
+
+    if(!(name && email && address && city && state  && zip && cardNumber && expiryDate && cvv)){
+        return alert("All Field are required! please fill-up all details.")
+    }
+    console.log(name , email , address , city , state  , zip , cardNumber , expiryDate , cvv)
+
+    setTimeout(()=>{
+        checkoutForm.classList.add("hidden");
+
+        const orderDetails = document.getElementById('orderDetails');
+        const orderConfirmation = document.getElementById('orderConfirmation');
+
+        orderConfirmation.classList.remove("hidden");
+
+        orderDetails.innerText = `
+            Thank you, ${name}! Your order has been placed successfully.
+            A confirmation email has been sent to ${email}.
+            Your order will be shipped to:
+            ${address}, ${city}, ${state} - ${zip}.
+            Payment processed with card ending in ${cardNumber}
+        `;
+        
+        // update the Local Storage data 
+        localStorage.removeItem('cardData');
+    }, 1500)
+})
+

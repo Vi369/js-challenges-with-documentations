@@ -18,7 +18,7 @@
 
     <!-- product container -->
     <section class="m-4 p-5">
-        <div class="flex flex-wrap gap-4" id="productContainer">
+        <div class="flex flex-wrap items-center justify-center gap-4" id="productContainer">
 
         </div>
         <div class="m-5">
@@ -26,10 +26,10 @@
             <p id="subtotal" class=" text-xl"> </p>
         </div>
 
-     </section>
+    </section>
 
      <!-- product template card -->
-      <template id="productTemplate">
+    <template id="productTemplate">
         <div class="bg-white shadow-md rounded-lg" id="cards">
             <div class="p-3">
                 <h2 class="text-xl font-semibold mb-2"></h2>
@@ -54,16 +54,14 @@
                 </button>
             </div>
         </div>
-      </template>
+    </template>
     
-
-      
-        <!-- Checkout Container -->
-        <div class="container mx-auto p-6 max-w-4xl">
+    <!-- Checkout Container -->
+    <div class="container mx-auto p-6 max-w-4xl">
             <h2 class="text-4xl font-bold text-center text-orange-500 mb-8">Final Sip to Your Chai!</h2>
     
             <!-- Checkout Form -->
-            <form class="bg-white shadow-md rounded-lg p-6 space-y-6">
+            <form id="checkoutForm" class="bg-white shadow-md rounded-lg p-6 space-y-6">
     
                 <!-- Personal Information -->
                 <div>
@@ -154,8 +152,13 @@
                     </button>
                 </div>
             </form>
-        </div>
+    </div>
 
+    <!-- order confirmation failed or success section -->
+    <div id="orderConfirmation" class="hidden shadow-md rounded-lg p-6 space-y-4 mt-6">
+        <h2 class="text-2xl font-semibold text-green-500 text-center">Order Confirmed! <i class="fa-solid fa-check"></i></h2>
+        <p id="orderDetails" class="text-lg text-gray-700 text-center"></p>
+    </div>
     <script type="module" src="cart.js"></script>
 </body>
 </html>
