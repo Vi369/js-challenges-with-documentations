@@ -14,17 +14,13 @@
         <h1 class="text-3xl font-bold py-4">Social Media Dashboard</h1>
      </header>
      <!-- main page-->
-      <main>
-        <!-- new post form -->
-         <div class="flex flex-col gap-5 m-5">
-            <textarea class="rounded-lg shadow-lg text-xl ring-2 ring-orange-300 w-[60%] py-2 px-4" name="" id="" placeholder="Share your thoughts?"></textarea>
-            <button type="submit" class="py-2 px-4 bg-orange-400 rounded-lg font-semibold hover:bg-orange-600 self-start">Post</button>
-         </div>
-        
-         <!-- post section -->
-          <section id="postContainer">
-
-          </section>
+      <main class="ml-5">
+        <!-- logged in user -->
+         <form action="" id="form" class="flex flex-col w-[40%] gap-4">
+            <input type="text" id="username" placeholder="Username" required class="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500">
+            <input type="password" id="password" placeholder="Password" required class="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500">
+            <button type="submit" class="py-2 px-4 bg-orange-400 rounded-lg font-semibold hover:bg-orange-600">Login</button>
+         </form>
       </main>
     <script type="module" src="/main.js"></script>
   </body>
