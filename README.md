@@ -37,3 +37,17 @@ Each section of this challenge is organized into its own directory with a dedica
 
 * [Day 16](./Day16/) =>  `Recursion`
 
+
+
+
+
+* [Day 24](./Day24-weather-app) => `Weather Deatails App` Go to Website : [click here](https://weather-app-iota-lemon.vercel.app/)
+
+* [Day 25](./Day25-Movie-app) => `Movie Deatails Search` Go to Website : [click here](https://movie-details-ecru.vercel.app/)
+
+* [Day 27](./Day25-Movie-app) => `Task Mangement App` Go to Website : [click here](https://js-challenge30days.vercel.app/)
+
+
+* [Day 28](./Day28-e-commerceApp) => `(Chai-store) E-commerce website` Go to Website : [click here](https://chai-store.vercel.app//)
+
+
