@@ -1,5 +1,5 @@
 /**
- * Activity 4: Memoization
+ * Activity 5: Memoization
  * Task: 7 Write a function that memoizes the results of another function.
  * use a closure to store the results of previous computations.
  * */
