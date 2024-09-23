@@ -40,57 +40,50 @@ and the second variable is `i` that represent currently array first element `low
 
 * firsty i check that i base case if `low < high` then only i perform the action called the helper function `partition` that return me `pivotIndex` based on the `pivotIndex` i called the quick sort function in recursive way for the the lower half and pass the high value `pivotIndex -1` and upper half the low value means staring value is `pivotIndex`.
 
-
-#### Activity 2 : Named and default exports
-
-##### Task: 3 exports multiple functions using named exports
-
-###### Approach : 
-* Approach is, Created multiple functions and used the `export` keyword to export them, then imported and used these functions in another script.
-
-###### Thought Process: 
-
-* I created several functions like subtract, multiply, and divide.
-* I exported these functions using : 
-```
-export {
-    subtract,
-    multiply,
-    divide
-}
-```
-
-* In `main.js`, I imported these functions with: 
-```
- import {
-    subtract,
-    multiply,
-    divide
-} from "./modules/Modules.js";
-
- ```
-
-##### Task: 4 exporting single function using default export
-###### Approach :
-* Approach is very simple creating a function and export it default and use it in another script and use it the function.
-
-###### Thought Process:
-* I created a function named `greeting` that greets the user and exported it as default using `export default`.
-
-* Then, I imported this function in my `main.js` file. By using the default export, we can call this function any name we want. I called it `greeting` and used it.
-
-
-#### Activity 3: Importing Entire Modules
-
-##### Task 5: Export Multiple Constants and Functions
-
+##### Task 4: Linear Search Algorithm
 ###### Approach:
-* Created multiple functions and constants as an object and imported it into another script to use them.
+* Loop through the array and compare each element to the target value.
+* If a match is found, return the index.
+* If the array is empty or no match is found, return a suitable message.
+###### Thought Process:
+* Linear Search is straightforward as it checks each element one by one. It’s useful for unsorted arrays but can be slow for large datasets.
+
+##### Task 5: Binary Search Algorithm
+###### Approach:
+
+* Use a divide-and-conquer approach. Find the middle element and compare it to the target.
+
+* If it matches, return the index. If it's smaller, search the right half; if larger, search the left half.
+
+* Repeat until the target is found or the search space is empty.
 
 ###### Thought Process:
-* First, I created an object `myMath` and added constants and functions as the object's properties and methods.
-* Then, I exported this object.
-* In `main.js`, I imported it as an object named `myMath` and used its properties and methods using dot notation.
+
+* Binary Search reduces the problem size by half in every step, making it much faster than Linear Search for sorted arrays.
+#### Activity: 3 String Algorithm
+
+##### Task 6: Counting Character Occurrences
+###### Approach:
+
+* Loop through the string and use a Map to track each character’s frequency.
+For each character, increment its count or initialize it to 1 if it’s the first occurrence.
+
+###### Thought Process:
+
+* Using a map is an efficient way to store character counts, as it provides fast lookups and updates. This task helps in understanding how to efficiently manage character frequencies.
+
+##### Task 7: Longest Substring Without Repeating Characters
+###### Approach:
+
+* Use a sliding window technique with two pointers (`left` and `right`) and a set to track unique characters.
+
+* Move the right pointer through the string, and if a duplicate is found, move the left pointer to shrink the window.
+
+* Keep track of the longest substring found.
+
+###### Thought Process:
+
+* The sliding window technique allows us to find the solution in linear time, ensuring that we only scan the string once. This is optimal for solving problems involving substrings or subsequences.
 
 #### Activity 4: Using third-party modules
 
@@ -123,10 +116,18 @@ export {
 
 #### Achievements:
 
-* Got better at rotating and merging arrays, helping me handle data more efficiently.
+* Sorting Skills Improved: Learned and implemented Bubble Sort, Selection Sort, and Quick Sort. Optimized Bubble Sort using a loop check to stop early if the array is already sorted.
 
-* Learned how to solve the Fibonacci sequence using dynamic programming to make the solution faster.
+* Search Algorithms Mastered: Implemented Linear Search and Binary Search. Understood how Binary Search is faster for sorted arrays by cutting the search space in half.
 
-* Improved my understanding of sorting algorithms and how they work.
+* String Handling: Counted character occurrences using a Map and found the longest substring without repeating characters with an efficient sliding window method.
 
-* Practiced organizing code with modules, making it easier to reuse and manage.
+* Used Advanced Data Structures: Applied a Map and Set to make the solutions more efficient and faster.
+
+* Array Manipulation: Rotated arrays by a given number of positions and merged sorted arrays using practical techniques.
+
+* Dynamic Programming Basics: Solved the Fibonacci sequence problem using memoization to avoid repeating calculations and save time.
+
+* Recursive Thinking: Built recursive solutions for Quick Sort and the Fibonacci sequence, breaking bigger problems into smaller, manageable ones.
+
+Achieved stronger problem-solving skills with each task, making the code more efficient and easy to understand.
