@@ -37,11 +37,22 @@ Each section of this challenge is organized into its own directory with a dedica
 
 * [Day 16](./Day16/) =>  `Recursion`
 
+* [Day 17](./Day17/) =>  `DSA Questions` without Readme documents 
+
+* [Day 18](./Day18/) =>  `Sorting algorithms` without Readme documents 
+
+* [Day 19](./Day19/) =>  `Regex challenge` without Readme documents 
+
+* [Day 20](./Day20/) =>  `Local Storage & Session Storage` without Readme documents 
+
+* [Day 21](./Day21/) =>  `Easy Leet-Code challenges` without Readme documents 
+
+* [Day 22](./Day22/) =>  `Intermediate Leet-code challenges` without Readme documents 
+
+* [Day 23](./Day22/) =>  `Advanced Leet-code challenges` without Readme documents 
 
 
-
-
-* [Day 24](./Day24-weather-app) => `Weather Deatails App` Go to Website : [click here](https://weather-app-iota-lemon.vercel.app/)
+* [Day 24](./Day24-weather-app) => `Weather Deatails App` Go to Website : [click here](https://weather-app-iota-lemon.vercel.app/)  
 
 * [Day 25](./Day25-Movie-app) => `Movie Deatails Search` Go to Website : [click here](https://movie-details-ecru.vercel.app/)
 
